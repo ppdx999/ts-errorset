@@ -1,44 +1,46 @@
-export class BadRequestHttpError extends Error {} // RFC 9110, 15.5.1
-export class UnauthorizedHttpError extends Error {} // RFC 9110, 15.5.2
-export class PaymentRequiredHttpError extends Error {} // RFC 9110, 15.5.3
-export class ForbiddenHttpError extends Error {} // RFC 9110, 15.5.4
-export class NotFoundHttpError extends Error {} // RFC 9110, 15.5.5
-export class MethodNotAllowedHttpError extends Error {} // RFC 9110, 15.5.6
-export class NotAcceptableHttpError extends Error {} // RFC 9110, 15.5.7
-export class ProxyAuthRequiredHttpError extends Error {} // RFC 9110, 15.5.8
-export class RequestTimeoutHttpError extends Error {} // RFC 9110, 15.5.9
-export class ConflictHttpError extends Error {} // RFC 9110, 15.5.10
-export class GoneHttpError extends Error {} // RFC 9110, 15.5.11
-export class LengthRequiredHttpError extends Error {} // RFC 9110, 15.5.12
-export class PreconditionFailedHttpError extends Error {} // RFC 9110, 15.5.13
-export class RequestEntityTooLargeHttpError extends Error {} // RFC 9110, 15.5.14
-export class RequestURITooLongHttpError extends Error {} // RFC 9110, 15.5.15
-export class UnsupportedMediaTypeHttpError extends Error {} // RFC 9110, 15.5.16
-export class RequestedRangeNotSatisfiableHttpError extends Error {} // RFC 9110, 15.5.17
-export class ExpectationFailedHttpError extends Error {} // RFC 9110, 15.5.18
-export class TeapotHttpError extends Error {} // RFC 9110, 15.5.19 (Unused)
-export class MisdirectedRequestHttpError extends Error {} // RFC 9110, 15.5.20
-export class UnprocessableEntityHttpError extends Error {} // RFC 9110, 15.5.21
-export class LockedHttpError extends Error {} // RFC 4918, 11.3
-export class FailedDependencyHttpError extends Error {} // RFC 4918, 11.4
-export class TooEarlyHttpError extends Error {} // RFC 8470, 5.2.
-export class UpgradeRequiredHttpError extends Error {} // RFC 9110, 15.5.22
-export class PreconditionRequiredHttpError extends Error {} // RFC 6585, 3
-export class TooManyRequestsHttpError extends Error {} // RFC 6585, 4
-export class RequestHeaderFieldsTooLargeHttpError extends Error {} // RFC 6585, 5
-export class UnavailableForLegalReasonsHttpError extends Error {} // RFC 7725, 3
+import { ExtensibleError } from "./extensible-error.ts";
 
-export class InternalServerHttpErrorError extends Error {} // RFC 9110, 15.6.1
-export class NotImplementedHttpError extends Error {} // RFC 9110, 15.6.2
-export class BadGatewayHttpError extends Error {} // RFC 9110, 15.6.3
-export class ServiceUnavailableHttpError extends Error {} // RFC 9110, 15.6.4
-export class GatewayTimeoutHttpError extends Error {} // RFC 9110, 15.6.5
-export class HTTPVersionNotSupportedHttpError extends Error {} // RFC 9110, 15.6.6
-export class VariantAlsoNegotiatesHttpError extends Error {} // RFC 2295, 8.1
-export class InsufficientStorageHttpError extends Error {} // RFC 4918, 11.5
-export class LoopDetectedHttpError extends Error {} // RFC 5842, 7.2
-export class NotExtendedHttpError extends Error {} // RFC 2774, 7
-export class NetworkAuthenticationRequiredHttpError extends Error {} // RFC 6585, 6
+export class BadRequestHttpError extends ExtensibleError {} // RFC 9110, 15.5.1
+export class UnauthorizedHttpError extends ExtensibleError {} // RFC 9110, 15.5.2
+export class PaymentRequiredHttpError extends ExtensibleError {} // RFC 9110, 15.5.3
+export class ForbiddenHttpError extends ExtensibleError {} // RFC 9110, 15.5.4
+export class NotFoundHttpError extends ExtensibleError {} // RFC 9110, 15.5.5
+export class MethodNotAllowedHttpError extends ExtensibleError {} // RFC 9110, 15.5.6
+export class NotAcceptableHttpError extends ExtensibleError {} // RFC 9110, 15.5.7
+export class ProxyAuthRequiredHttpError extends ExtensibleError {} // RFC 9110, 15.5.8
+export class RequestTimeoutHttpError extends ExtensibleError {} // RFC 9110, 15.5.9
+export class ConflictHttpError extends ExtensibleError {} // RFC 9110, 15.5.10
+export class GoneHttpError extends ExtensibleError {} // RFC 9110, 15.5.11
+export class LengthRequiredHttpError extends ExtensibleError {} // RFC 9110, 15.5.12
+export class PreconditionFailedHttpError extends ExtensibleError {} // RFC 9110, 15.5.13
+export class RequestEntityTooLargeHttpError extends ExtensibleError {} // RFC 9110, 15.5.14
+export class RequestURITooLongHttpError extends ExtensibleError {} // RFC 9110, 15.5.15
+export class UnsupportedMediaTypeHttpError extends ExtensibleError {} // RFC 9110, 15.5.16
+export class RequestedRangeNotSatisfiableHttpError extends ExtensibleError {} // RFC 9110, 15.5.17
+export class ExpectationFailedHttpError extends ExtensibleError {} // RFC 9110, 15.5.18
+export class TeapotHttpError extends ExtensibleError {} // RFC 9110, 15.5.19 (Unused)
+export class MisdirectedRequestHttpError extends ExtensibleError {} // RFC 9110, 15.5.20
+export class UnprocessableEntityHttpError extends ExtensibleError {} // RFC 9110, 15.5.21
+export class LockedHttpError extends ExtensibleError {} // RFC 4918, 11.3
+export class FailedDependencyHttpError extends ExtensibleError {} // RFC 4918, 11.4
+export class TooEarlyHttpError extends ExtensibleError {} // RFC 8470, 5.2.
+export class UpgradeRequiredHttpError extends ExtensibleError {} // RFC 9110, 15.5.22
+export class PreconditionRequiredHttpError extends ExtensibleError {} // RFC 6585, 3
+export class TooManyRequestsHttpError extends ExtensibleError {} // RFC 6585, 4
+export class RequestHeaderFieldsTooLargeHttpError extends ExtensibleError {} // RFC 6585, 5
+export class UnavailableForLegalReasonsHttpError extends ExtensibleError {} // RFC 7725, 3
+
+export class InternalServerHttpError extends ExtensibleError {} // RFC 9110, 15.6.1
+export class NotImplementedHttpError extends ExtensibleError {} // RFC 9110, 15.6.2
+export class BadGatewayHttpError extends ExtensibleError {} // RFC 9110, 15.6.3
+export class ServiceUnavailableHttpError extends ExtensibleError {} // RFC 9110, 15.6.4
+export class GatewayTimeoutHttpError extends ExtensibleError {} // RFC 9110, 15.6.5
+export class HTTPVersionNotSupportedHttpError extends ExtensibleError {} // RFC 9110, 15.6.6
+export class VariantAlsoNegotiatesHttpError extends ExtensibleError {} // RFC 2295, 8.1
+export class InsufficientStorageHttpError extends ExtensibleError {} // RFC 4918, 11.5
+export class LoopDetectedHttpError extends ExtensibleError {} // RFC 5842, 7.2
+export class NotExtendedHttpError extends ExtensibleError {} // RFC 2774, 7
+export class NetworkAuthenticationRequiredHttpError extends ExtensibleError {} // RFC 6585, 6
 
 export type HttpError =
   | BadRequestHttpError
@@ -70,7 +72,7 @@ export type HttpError =
   | TooManyRequestsHttpError
   | RequestHeaderFieldsTooLargeHttpError
   | UnavailableForLegalReasonsHttpError
-  | InternalServerHttpErrorError
+  | InternalServerHttpError
   | NotImplementedHttpError
   | BadGatewayHttpError
   | ServiceUnavailableHttpError
@@ -91,7 +93,7 @@ export const isHttpHttpError = (error: any): error is HttpError => {
   );
 };
 
-export const statusCodes = (error: HttpError): number => {
+export const statusCodes = (error: Error): number => {
   switch (error.constructor) {
     case BadRequestHttpError:
       return 400;
@@ -149,7 +151,7 @@ export const statusCodes = (error: HttpError): number => {
       return 431;
     case UnavailableForLegalReasonsHttpError:
       return 451;
-    case InternalServerHttpErrorError:
+    case InternalServerHttpError:
       return 500;
     case NotImplementedHttpError:
       return 501;
